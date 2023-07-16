@@ -1,0 +1,20 @@
+import random as rd 
+print("Welcome to the game\n")
+print('"GUESS THE NUMBER\n')
+reply=int(input("Press 1 to start else to leave\n"))
+if reply==1:
+    print("OKAY!!!\n so let's start")
+    while True:
+        comp_no=rd.randint(1,10)
+        player_no=int(input("choose your no."))
+        if comp_no==player_no:
+            print(f"correct guess dude, it's really {comp_no}")
+        elif comp_no in range(1,6) and player_no in range(1,6):
+            print(f"you were close to the correct one.\nIt was {comp_no}")
+        elif comp_no in range(5,11) and player_no in range(5,11):
+            print(f"you were close to the correct one.\nIt was {comp_no}")
+        else:
+            print(f"wrong guess\n It was {comp_no}\n try again")
+else:
+    print("BYE BYE\nSee you soon")
+   
